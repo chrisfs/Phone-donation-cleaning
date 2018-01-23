@@ -1,4 +1,4 @@
-#import pandas
+#various cleaning functions for donation csv files. 
 import csv
 def phone(orig):
     test =orig.replace("-","")
@@ -27,8 +27,6 @@ n=1
 #n is line number for printing errors in data
 for row in InfileReadObj:
     pledge = row
-    #print(pledge[43])
-    #print(len(pledge[43]))
     #take non numbers out of phone number 
     newphone = phone(pledge[15])
     pledge[15]=newphone
